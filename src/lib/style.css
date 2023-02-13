@@ -1,0 +1,19 @@
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1) !important;
+}
+
+button {
+    background-color: #0079B7 !important;
+    border: none !important;
+}
+
+p {
+    text-align: justify;
+}
+
+.image {
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+}
