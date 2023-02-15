@@ -35,10 +35,10 @@
 
 <Container fluid>
     <Row>
-        <h3>Photos</h3>
+        <h3 id="photos">Photos</h3>
         {#if isFinished}
             {#each images as image, is}
-                <Col md="4" lg="4">
+                <Col md="3" lg="3">
                     <Image keyword={image.keyword} url={image.url} />
                 </Col>
             {/each}

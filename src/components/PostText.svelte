@@ -7,6 +7,7 @@
         Row,
         FormGroup,
         Label,
+        Col,
     } from "sveltestrap";
     let inputValue = "";
     const dispatch = createEventDispatcher();
@@ -17,16 +18,28 @@
 
 <Container fluid>
     <Row class="d-flex justify-content-center">
-        <FormGroup>
-            <h3>Blog Post</h3>
-            <Input
-                type="textarea"
-                bind:value={inputValue}
-                name="text"
-                id="postText"
-                rows={5}
-            />
-        </FormGroup>
-        <Button size="sm" on:click={search}>Generate</Button>
+        <Col sm="4">
+            <a href="https://ntszki.hu/" target="_blank" rel="noreferrer"
+                ><img src="Nadasdy.jpg" alt="NTSZKI" id="ntszki" /></a
+            >
+        </Col>
+        <Col sm="4" class="d-flex justify-content-center">
+            <h3 id="blog">Blog Post</h3>
+        </Col>
+        <Col sm="4">
+            <a href="https://dilium.com" target="_blank" rel="noreferrer"
+                ><img src="dilium.png" alt="Dilium" id="dilium" /></a
+            >
+        </Col>
+        <Input
+            type="textarea"
+            bind:value={inputValue}
+            name="text"
+            id="postText"
+            rows={5}
+        />
+    </Row>
+    <Row>
+        <Button size="sm" on:click={search} id="generate">Generate</Button>
     </Row>
 </Container>
