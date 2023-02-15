@@ -9,7 +9,7 @@
     let isFinished = false;
     const fn = async () => {
         isFinished = false;
-        for (let i = 1; i < keywords.length; i++) {
+        for (let i = 0; i < keywords.length; i++) {
             await OpenAIReq.post("/images/generations", {
                 prompt: keywords[i],
                 n: 1,
