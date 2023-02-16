@@ -67,13 +67,11 @@ img {
     width: auto;
     height: 60px;
     margin-bottom: 5%;
-    float: left;
 }
 
 #dilium {
     width: auto;
     height: 50px;
-    float: right;
 }
 
 #blog {
@@ -91,16 +89,4 @@ img {
 
 #photos {
     margin-bottom: 3%;
-}
-
-@media screen and (max-widht:600px) {
-    #ntszki {
-        display: grid;
-        place-items: center;
-    }
-
-    #dilium {
-        display: grid;
-        place-items: center;
-    }
 }

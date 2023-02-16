@@ -9,6 +9,10 @@
   let keywords = [];
 
   const send = async (e) => {
+    if (!e.detail.text) {
+      alert("Please fill out Blog Text field!");
+      return;
+    }
     await OpenAIReq.post("/completions", {
       model: "text-davinci-003",
       prompt: `Summarize this:\n\n${e.detail.text}`,

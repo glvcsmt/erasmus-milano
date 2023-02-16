@@ -1,14 +1,8 @@
 <script>
     import { createEventDispatcher } from "svelte";
-    import {
-        Button,
-        Input,
-        Container,
-        Row,
-        FormGroup,
-        Label,
-        Col,
-    } from "sveltestrap";
+    import { Button, Input, Container, Row, Col } from "sveltestrap";
+    import dilium from "../../public/dilium.svg";
+    import ntszki from "../../public/ntszki.svg";
     let inputValue = "";
     const dispatch = createEventDispatcher();
     function search() {
@@ -17,22 +11,43 @@
 </script>
 
 <Container fluid>
-    <Row class="d-flex justify-content-center">
-        <Col sm="4">
+    <Row class="d-flex justify-content-center flex-wrap">
+        <Col
+            xs="12"
+            sm="12"
+            md="6"
+            lg="4"
+            class="order-0 order-sm-0 order-md-0 order-lg-0 d-flex justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start"
+        >
             <a href="https://ntszki.hu/" target="_blank" rel="noreferrer"
-                ><img src="Nadasdy.jpg" alt="NTSZKI" id="ntszki" /></a
+                ><img src={ntszki} height="60" width="60" alt="NTSZKI" id="ntszki" /></a
             >
         </Col>
-        <Col sm="4" class="d-flex justify-content-center">
+        <Col
+            xs="12"
+            sm="12"
+            md="12"
+            lg="4"
+            class="mt-2 order-2 order-sm-2 order-md-2 order-lg-1 d-flex justify-content-center"
+        >
             <h3 id="blog">Blog Post</h3>
         </Col>
-        <Col sm="4">
+        <Col
+            xs="12"
+            sm="12"
+            md="6"
+            lg="4"
+            class="mt-2 order-0 order-sm-1 order-md-1 order-lg-2 d-flex justify-content-center justify-content-sm-center justify-content-md-end justify-content-lg-end"
+        >
             <a href="https://dilium.com" target="_blank" rel="noreferrer"
-                ><img src="dilium.png" alt="Dilium" id="dilium" /></a
+                ><img src={dilium} height="50" width="175" alt="Dilium" id="dilium" /></a
             >
         </Col>
+    </Row>
+    <Row class="">
         <Input
             type="textarea"
+            placeholder="Blog Text"
             bind:value={inputValue}
             name="text"
             id="postText"
